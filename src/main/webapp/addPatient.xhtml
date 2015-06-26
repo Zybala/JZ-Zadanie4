@@ -39,12 +39,12 @@
                     <p:message for="pesel" id="msgPesel" /> 
                     
                     <p:outputLabel value="#{msg.patientBirthdate}" />
-                    <p:calendar id="birthdate" value="#{patientBean.patient.birthDate}"
+                    <p:calendar id="dob" value="#{patientBean.patient.birthDate}"
                                     validator="#{patientBean.dateValidator}" required="true" 
                                         requiredMessage="#{err.fieldRequired}">                                   
-                        <p:ajax update="msgBirthdate" event="dateSelect" />
+                        <p:ajax update="msgdob" event="dateSelect" />
                     </p:calendar>                    
-                    <p:message for="birthdate" id="msgBirthdate" /> 
+                    <p:message for="dob" id="msgdob" /> 
                     
                     <p:outputLabel value="#{msg.patientAddress}" />
                     <p:inputTextarea rows="2" cols="25" id="address" value="#{patientBean.patient.address}" 
